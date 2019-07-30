@@ -6,14 +6,14 @@
 </head>
 <body>
 	<div style="display: grid;">
-		<form method="POST" action="/config.php">
-			<div>
-				<input type="text" name="username">
+		<form method="POST" action="/config.php" style="justify-self: center; align-self: center">
+			<div style="padding: 5px">
+				<input type="text" name="username" required placeholder="Username">
 			</div>
-			<div>
-				<input type="password" name="password">
+			<div style="padding: 5px">
+				<input type="password" name="password" required placeholder="Password">
 			</div>
-			<div>
+			<div style="padding: 5px">
 				<input type="submit" name="submit">
 			</div>
 		</form>

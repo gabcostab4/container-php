@@ -1,10 +1,4 @@
 <?php
-define('DB_SERVER', 'database');
-define('DB_PORT', '3306');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'docker');
-define('DB_SERVER', 'localhost');
-define('DB_NAME', 'auth');
 
 try {
 
@@ -22,10 +16,7 @@ try {
 	} else {
 		echo  "<p>We don't know you. Please, identify yourself.</p>";
 	}
-
-	$rows = null;
-	$db = null;
-
+	
 } catch(PDOException $e) {
 	print 'ERROR! ' . $e->getMessage() . '<br>';
 }
