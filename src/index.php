@@ -1,23 +1,24 @@
-<?php
 
-$value = "World";
-
-try {
-	
-	$db = new PDO('mysql:host=database;port=3306;dbname=mydb;charset=utf8mb4', 'myuser', 'secret');
-	$databaseTest = $db->query('SELECT * FROM dockerSample')->fetchAll(PDO::FETCH_OBJ);
-
-} catch(PDOException $e) {
-	die($e);
-}
-
-?>
-
+<!DOCTYPE html>
 <html>
+<head>
+	<title>Auth</title>
+</head>
 <body>
-	<h1>Hello, <?= $value ?>!</h1>
-	<?php foreach($databaseTest as $row): ?>
-		<p>Hello, <?= $row->name ?></p>
-	<?php endforeach; ?>
+	<div style="display: grid;">
+		<form method="POST" action="/config.php">
+			<div>
+				<input type="text" name="username">
+			</div>
+			<div>
+				<input type="password" name="password">
+			</div>
+			<div>
+				<input type="submit" name="submit">
+			</div>
+		</form>
+	</div>
+</body>
+</html>
 </body>
 </html>
